@@ -1,5 +1,5 @@
 FROM starlabio/ubuntu-base:1.0
-MAINTAINER Derek Straka <derek@starlab.io>
+MAINTAINER Will Abele <will.abele@starlab.io>
 
 # Grab the linaro tool chain we want
 RUN mkdir -p /opt/linaro/aarch64
