@@ -1,6 +1,13 @@
 FROM starlabio/ubuntu-base:1.0
 MAINTAINER Will Abele <will.abele@starlab.io>
 
+# Get bc for building the Linux Kernel.
+
+RUN apt-get update && \
+    apt-get --quiet --yes install bc && \
+        apt-get autoremove -y && \
+        apt-get clean && \
+rm -rf /var/lib/apt/lists* /tmp/* /var/tmp/*
 # Grab the linaro tool chain we want
 RUN mkdir -p /opt/linaro/aarch64
 
